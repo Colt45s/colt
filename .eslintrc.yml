@@ -1,0 +1,37 @@
+env:
+  es6: true
+  node: true
+  browser: true
+parser: babel-eslint
+parserOptions:
+  ecmaFeatures:
+    jsx: true
+extends:
+  - plugin:react/recommended
+  - plugin:react-redux/recommended
+  - plugin:flowtype/recommended
+  - prettier
+  - prettier/flowtype
+  - prettier/react
+plugins:
+  - react
+  - react-redux
+  - flowtype
+  - prettier
+settings:
+  react:
+    pragma: React
+    version: ^16.5.1
+rules:
+  prettier/prettier:
+    - 2
+    - trailingComma: none
+      singleQuote: true
+      semi: false
+  react/prefer-stateless-function: 2
+  react/prop-types: 0
+  flowtype/define-flow-type: 1
+  flowtype/require-valid-file-annotation:
+    - 1
+    - always
+    - annotationStyle: block
